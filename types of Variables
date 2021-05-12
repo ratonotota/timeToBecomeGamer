@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LearningCsharp : MonoBehaviour
+{
+    //Variable that are worth a number int = whole | float = decimal | double = decimal with more houses
+    float power = 9.123f;
+    double mana = 9213.293;
+    int numberHamburguer = 9;
+
+    //Variable that is a 'string' of character
+    string cityName = "BurguerTown";
+
+    //variable to determine true or false
+    bool hasJumped = false;
+    //type of variable = bool | name of variable = hasJumped | value of Variable = false
+
+
+}
