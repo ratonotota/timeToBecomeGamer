@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player 
+{
+    float health;
+    
+    //This is the constructor which takes all parameter for a new object to be made.
+    public Player(float health)
+    {
+        this.health = health;
+        Debug.Log(health);
+    }
+
+    //this is a function that can be called everytime the player is attacked.
+   public void gotAttacked(float monsterStr)
+    {
+        health = health - monsterStr;
+        Debug.Log("your current health after being attack = " + health);
+    }
+    
+}//class
