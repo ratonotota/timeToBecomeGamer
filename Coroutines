@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LearningHowtogame : MonoBehaviour
+{
+    private void Start()
+    {
+        //Here I call the coroutine and also add in a float which is required because that coroutine takes in a float called timeWait
+        StartCoroutine(Dothis(6f));
+    }
+
+    //A coroutine must return a IEnumerator, usually how long it's going to wait for
+    IEnumerator Dothis(float timeWait){
+        //yield return new WaitForSeconds(value) is the value we return to tell how many seconds it has to wait.
+        yield return new WaitForSeconds(20f);
+        print("I'm a pro gamer 2019");
+        yield return new WaitForSeconds(5f);
+        Debug.Log("5 seconds have passed since my last message");
+        yield return new WaitForSeconds(timeWait);
+        //Here my function / coroutine takes in a float called timeWait which in this case is 6, and uses it to wait 6 seconds.
+        
+    }
+
+}
