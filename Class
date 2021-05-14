@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player 
+{
+    float health;
+    float strengh;
+    float mana;
+    string type;
+    bool canfly;
+
+    //this is the BUILDER, it builds what the object is going to be
+   public Player(float health, float strengh, float manaa, string type, bool canfly)
+    {
+        //this. is used to reference a variable that has the same name as the parameter that this builder takes in
+        this.health = health;
+        this.strengh = strengh;
+        mana = manaa;
+        this.type = type;
+        this.canfly = canfly;
+    }
+
+   public void infoChar()
+    {
+        Debug.Log("Health = " + health);
+        Debug.Log("Strenght = " + strengh);
+        Debug.Log("Mana = " + mana);
+        Debug.Log("Your charachter is  " + type);
+        if (canfly == true)
+        {
+            Debug.Log("congrats you can fly u piece of shit");
+
+        }
+        else
+        {
+            Debug.Log("omg ur balls are so huge and heavy that is too much weight, unfortunately you can't fly");
+        }
+
+    }
+    //to build an object with this class you have to say Player 'name' = new Player(parameters if any); (eg : Player bee = new PLayer(blablablabl)
+    //To access a function inside this class you have to say 'name'.'function name' (eg : bee.InfoChar();)
+ 
+}//class
