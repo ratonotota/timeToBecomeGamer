@@ -2,22 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player 
+public class Player
 {
-    float health;
-    
-    //This is the constructor which takes all parameter for a new object to be made.
+    float _health;
+
+     //This is the constructor which takes all parameter for a new object to be made.
     public Player(float health)
     {
-        this.health = health;
-        Debug.Log(health);
-    }
+        _health = health;
 
-    //this is a function that can be called everytime the player is attacked.
-   public void gotAttacked(float monsterStr)
-    {
-        health = health - monsterStr;
-        Debug.Log("your current health after being attack = " + health);
     }
     
+    public float health
+    {
+        //This returns the health so we can access it on the other side | we can "get" the health.
+        get
+        {
+            return _health;
+        }
+        //this Sets the health to whatever value we put on the other side
+        set
+        {
+            _health = value;
+
+        }
+    }
+
+
+    //This returns the health so we can access it on the other side | we can "get" the health.
+    public float getHealth()
+    {
+        return health;
+    }
+
+
+    //this Sets the health to the health - what damage u took from the other side.
+    public void doDamage(float dmg)
+    {
+
+        health = health - dmg;
+        Debug.Log("You just took " + dmg + " damage");
+    }
+
+
+
+
+
 }//class
