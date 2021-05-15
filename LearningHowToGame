@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LearningHowtogame : MonoBehaviour
+{
+    private void Start()
+    {
+        Warrior warrior1 = new Warrior();
+        warrior1.Health = 100;
+        warrior1.Mana = 100;
+        warrior1.Strenght = 120;
+        Debug.Log(warrior1.getDamaged(10f));
+        warrior1.specialwarrioratk();
+        warrior1.infoChar();
+
+        Mage mage1 = new Mage(100, 200, 50);
+        mage1.attack();
+        Debug.Log(mage1.getDamaged(29f));
+        mage1.specialmageatk();
+        mage1.infoChar();
+        
+
+
+    }
+
+    
+}
