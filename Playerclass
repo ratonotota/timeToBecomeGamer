@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player
+{
+    public float Strenght;
+    public float Health;
+    public float Mana;
+
+    public Player()
+    {
+
+    }
+    public Player(float strenght, float health, float mana)
+    {
+        this.Strenght = strenght;
+        this.Health = health;
+        this.Mana = mana;
+        
+    }
+    public void infoChar()
+    {
+        Debug.Log("You health is " + Health);
+        Debug.Log("Your mana is " + Mana);
+        Debug.Log("You strenght is " + Strenght);
+    }
+
+    public float getDamaged(float dmg)
+    {
+        Health = Health - dmg;
+        Debug.Log("You took " + dmg + " damage");
+        return Health;
+    }
+    public void attack()
+    {
+        Debug.Log("You attacked");
+    }
+  
+    
+
+
+    
+
+
+
+
+
+}//class

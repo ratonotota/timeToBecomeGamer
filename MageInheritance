@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Mage : Player
+{
+    public Mage(float health, float mana, float strenght)
+    {
+        Health = health;
+        Mana = mana;
+        Strenght = strenght;
+           
+    }
+    public void specialmageatk()
+    {
+        Debug.Log("You are doing special mage only attack");
+    }
+
+
+}

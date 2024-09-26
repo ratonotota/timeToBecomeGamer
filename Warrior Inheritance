@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Warrior : Player
+{
+    public void specialwarrioratk()
+    {
+        Debug.Log("You are doing special warrior only attack");
+    }
+  
+
+
+
+
+
+
+}//class
